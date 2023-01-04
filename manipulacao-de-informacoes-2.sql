@@ -86,3 +86,6 @@ WHERE cli_nome = 'Marcos' OR cli_nome = 'Markos' OR cli_nome = 'Markus';
 SELECT *
 FROM cli_clientes
 WHERE SOUNDEX(cli_nome) = SOUNDEX('Marcos');
+
+SELECT cli_nome, cli_data_nascimento, TIMESTAMPDIFF(YEAR, cli_data_nascimento, CURDATE()) AS cli_idade
+FROM cli_clientes;
